@@ -1,0 +1,32 @@
+.modal-ep {
+    border: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-ep .modal-header,
+.modal-ep .modal-footer {
+    border-color: #f0e2e6;
+}
+
+.modal-ep .modal-title {
+    color: var(--azul-escuro);
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.modal-ep .modal-body p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+.modal-ep .btn-danger {
+    background-color: var(--vermelho);
+    border-color: var(--vermelho);
+}
+
+.modal-ep .btn-danger:hover {
+    background-color: var(--vermelho-escuro);
+    border-color: var(--vermelho-escuro);
+}

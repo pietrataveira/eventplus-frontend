@@ -1,0 +1,130 @@
+.campo,
+.campo-select select {
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 6px 4px;
+    border: 0;
+    border-bottom: 1px solid #5c5a5b;
+    border-radius: 0;
+    outline: none;
+    background: transparent;
+    color: var(--preto);
+    font-size: 0.9rem;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.campo::placeholder {
+    color: var(--cinza-placeholder);
+    font-weight: 300;
+    opacity: 1;
+}
+
+.campo:focus,
+.campo-select select:focus {
+    border-bottom-color: var(--vermelho);
+    box-shadow: 0 1px 0 var(--vermelho);
+}
+
+/* campo com ícone (relógio, upload...) */
+.campo-com-icone {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.campo-icone {
+    position: absolute;
+    display: flex;
+    pointer-events: none;
+    color: var(--preto);
+}
+
+.icone-direita .campo-icone { right: 4px; }
+.icone-direita .campo { padding-right: 30px; }
+.icone-esquerda .campo-icone { left: 0; }
+.icone-esquerda .campo { padding-left: 26px; }
+
+/* select com a bolinha preta de seta */
+.campo-select {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.campo-select select {
+    appearance: none;
+    padding-right: 32px;
+    cursor: pointer;
+}
+
+.campo-select select.vazio {
+    color: var(--cinza-placeholder);
+    font-weight: 300;
+}
+
+.campo-select select option {
+    color: var(--preto);
+    font-weight: 400;
+}
+
+.campo-select-seta {
+    position: absolute;
+    right: 2px;
+    width: 18px;
+    height: 18px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--preto);
+    pointer-events: none;
+}
+
+.campo-select-seta::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-right: 1.6px solid #fff;
+    border-bottom: 1.6px solid #fff;
+    transform: translateY(-1px) rotate(45deg);
+}
+
+/* input de arquivo estilizado como os outros campos */
+.campo-arquivo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    padding: 8px 32px 4px 6px;
+    border-bottom: 1px solid #5c5a5b;
+    font-size: 0.9rem;
+    color: var(--cinza-placeholder);
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.campo-arquivo.preenchido {
+    color: var(--preto);
+    font-weight: 400;
+}
+
+.campo-arquivo input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.campo-arquivo:focus-within {
+    border-bottom-color: var(--vermelho);
+    box-shadow: 0 1px 0 var(--vermelho);
+}
+
+.campo-arquivo .campo-icone {
+    right: 4px;
+}
+
+.campo-arquivo-nome {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,19 @@
+.admin-eventos-lista {
+    padding: 8px 0 80px;
+}
+
+.admin-eventos-grade {
+    width: min(100%, 920px);
+    margin: 36px auto 0;
+}
+
+/* campo de data: deixa o texto cinza enquanto está vazio */
+.campo-data.vazio {
+    color: var(--cinza-placeholder);
+    font-weight: 300;
+}
+
+.campo-data::-webkit-calendar-picker-indicator {
+    opacity: 0.5;
+    cursor: pointer;
+}

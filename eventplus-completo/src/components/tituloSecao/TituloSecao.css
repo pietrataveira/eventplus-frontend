@@ -1,0 +1,32 @@
+.titulo-secao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+}
+
+.titulo-secao h1,
+.titulo-secao h2 {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: var(--preto);
+}
+
+.titulo-secao-linha {
+    width: 112px;
+    height: 1.5px;
+    background: var(--vermelho);
+}
+
+.titulo-secao.claro h1,
+.titulo-secao.claro h2 {
+    color: var(--branco);
+}
+
+.titulo-secao.claro .titulo-secao-linha {
+    background: var(--branco);
+}

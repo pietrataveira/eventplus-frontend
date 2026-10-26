@@ -1,0 +1,35 @@
+.eventos-pagina {
+    padding: 56px 0 96px;
+}
+
+.eventos-container {
+    max-width: 920px;
+}
+
+.eventos-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 2px;
+    margin-bottom: 18px;
+}
+
+.eventos-filtro {
+    padding: 2px 14px;
+    border: 0;
+    border-radius: 999px;
+    background: none;
+    color: var(--preto);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 160ms ease, color 160ms ease;
+}
+
+.eventos-filtro:hover {
+    background: var(--vermelho-claro);
+}
+
+.eventos-filtro.ativo {
+    background: var(--vermelho);
+    color: var(--branco);
+}

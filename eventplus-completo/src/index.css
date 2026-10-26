@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --vermelho: #b51d44;
+  --vermelho-escuro: #941536;
+  --vermelho-claro: #fbeef2;
+  --azul-escuro: #17143f;
+  --cinza-ilustracao: #3f3d56;
+  --cinza-claro: #ded9da;
+  --cinza-placeholder: #b4acae;
+  --cinza-texto: #6e6668;
+  --branco: #ffffff;
+  --preto: #151515;
+  --azul-categoria: #d2dcfb;
+  --sombra-header: 0 3px 6px rgba(0, 0, 0, 0.16);
+  --largura-conteudo: 1100px;
+
+  font-family: "Poppins", Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Poppins", Arial, sans-serif;
+  color: var(--preto);
+  background: var(--branco);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* Container padrão das telas */
+.container-ep {
+  width: min(var(--largura-conteudo), calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* Mensagens de feedback */
+.mensagem-ep {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--vermelho-escuro);
+}
+
+.mensagem-ep.sucesso {
+  color: #1d7a4a;
+}
+
+.estado-vazio-ep {
+  width: 100%;
+  padding: 32px 0;
+  text-align: center;
+  color: var(--cinza-texto);
+}

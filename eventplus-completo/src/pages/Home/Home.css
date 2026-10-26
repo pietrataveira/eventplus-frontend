@@ -1,0 +1,116 @@
+/* ---------- Visão ---------- */
+.home-visao {
+    padding: 64px 0;
+    background: var(--vermelho);
+    color: var(--branco);
+}
+
+.home-visao-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+}
+
+.home-visao-imagem {
+    width: 260px;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    background: var(--branco);
+}
+
+.home-visao-imagem img {
+    width: 100%;
+}
+
+.home-visao-texto {
+    max-width: 300px;
+    text-align: center;
+}
+
+.home-visao-texto .titulo-secao h2 {
+    font-size: 1.15rem;
+}
+
+.home-visao-texto p {
+    margin: 22px 0 0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+/* ---------- Próximos eventos ---------- */
+.home-eventos {
+    padding: 64px 0 80px;
+}
+
+.home-eventos-grade {
+    width: min(100%, 920px);
+    margin: 40px auto 0;
+}
+
+/* ---------- Contato ---------- */
+.home-contato {
+    padding: 40px 0 72px;
+    background: var(--vermelho);
+    color: var(--branco);
+}
+
+.home-contato-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 140px;
+    margin-top: 48px;
+}
+
+.home-contato-endereco {
+    margin: 0;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 2;
+    font-style: normal;
+}
+
+.home-contato-endereco p {
+    margin: 0;
+}
+
+.home-contato-endereco a {
+    color: var(--branco);
+    text-decoration: underline;
+}
+
+.home-contato-mapa {
+    display: block;
+    width: 300px;
+    transition: transform 200ms ease;
+}
+
+.home-contato-mapa:hover {
+    transform: scale(1.03);
+}
+
+.home-contato-mapa svg {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 760px) {
+    .home-visao-conteudo,
+    .home-contato-conteudo {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .home-visao-imagem {
+        width: 200px;
+    }
+
+    .home-contato-mapa {
+        width: 240px;
+    }
+}

@@ -1,0 +1,66 @@
+.tabela-crud-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabela-crud {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    color: var(--branco);
+}
+
+.tabela-crud th {
+    padding: 0 8px 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.tabela-crud td {
+    padding: 16px 8px 22px;
+    font-size: 0.82rem;
+    font-weight: 300;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.tabela-crud-acao-coluna {
+    width: 12%;
+}
+
+.tabela-crud tr.em-edicao td {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.tabela-crud-acao {
+    width: 34px;
+    height: 34px;
+    display: inline-grid;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: none;
+    color: var(--branco);
+    cursor: pointer;
+    transition: background-color 160ms ease, transform 120ms ease;
+}
+
+.tabela-crud-acao:hover {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.tabela-crud-acao:active {
+    transform: scale(0.92);
+}
+
+.tabela-crud-acao:focus-visible {
+    outline: 2px solid var(--branco);
+    outline-offset: 2px;
+}
+
+.tabela-crud-estado {
+    font-weight: 400 !important;
+    opacity: 0.9;
+}

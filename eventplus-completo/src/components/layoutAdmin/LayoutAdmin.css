@@ -1,0 +1,106 @@
+/* ---------- parte branca (formulário) ---------- */
+.secao-cadastro {
+    padding: 44px 0 72px;
+    background: var(--branco);
+}
+
+.secao-cadastro-conteudo {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    align-items: center;
+    gap: 64px;
+    margin-top: 36px;
+}
+
+.secao-cadastro-ilustracao svg {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+}
+
+.secao-cadastro-formulario {
+    width: 100%;
+    max-width: 440px;
+    justify-self: end;
+}
+
+.formulario-admin {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.formulario-admin-linha {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.formulario-admin-linha.nome-data {
+    grid-template-columns: 1.15fr 1fr;
+}
+
+.formulario-admin .botao {
+    margin-top: 2px;
+}
+
+.formulario-admin-cancelar {
+    align-self: center;
+    border: 0;
+    background: none;
+    color: var(--cinza-texto);
+    font-size: 0.85rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.formulario-admin-cancelar:hover {
+    color: var(--vermelho);
+}
+
+.formulario-admin-modo {
+    margin: 0 0 -4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--vermelho);
+}
+
+/* ---------- parte vermelha (lista) ---------- */
+.secao-lista {
+    min-height: 330px;
+    padding: 40px 0 80px;
+    background: var(--vermelho);
+    color: var(--branco);
+}
+
+.secao-lista-conteudo {
+    margin-top: 32px;
+}
+
+/* ---------- responsivo ---------- */
+@media (max-width: 860px) {
+    .secao-cadastro-conteudo {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .secao-cadastro-ilustracao {
+        display: flex;
+        justify-content: center;
+    }
+
+    .secao-cadastro-ilustracao svg {
+        max-width: 300px;
+    }
+
+    .secao-cadastro-formulario {
+        justify-self: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .formulario-admin-linha,
+    .formulario-admin-linha.nome-data {
+        grid-template-columns: 1fr;
+    }
+}

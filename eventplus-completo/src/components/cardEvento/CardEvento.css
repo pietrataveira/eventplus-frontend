@@ -1,0 +1,121 @@
+.card-evento {
+    width: 100%;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--branco);
+    border: 1px solid #8b1c3f;
+    border-radius: 4px;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.card-evento:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(23, 20, 63, 0.12);
+}
+
+.card-evento.em-edicao {
+    outline: 3px solid rgba(181, 29, 68, 0.35);
+}
+
+.card-evento-imagem {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.card-evento-corpo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 14px 16px;
+    text-align: center;
+}
+
+.card-evento-categoria {
+    align-self: flex-start;
+    margin-bottom: 10px;
+    padding: 2px 12px;
+    border-radius: 999px;
+    background: var(--azul-categoria);
+    font-size: 0.68rem;
+    color: var(--azul-escuro);
+}
+
+.card-evento h3 {
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--preto);
+}
+
+.card-evento p {
+    flex: 1;
+    margin: 0 0 12px;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--preto);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-evento-link {
+    color: var(--vermelho);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.card-evento-link:hover {
+    text-decoration: underline;
+}
+
+.card-evento-acoes {
+    display: flex;
+    gap: 18px;
+}
+
+.card-evento-acoes button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 0;
+    background: none;
+    color: var(--vermelho);
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.card-evento-acoes button:hover {
+    text-decoration: underline;
+}
+
+/* grade de cards usada em Eventos, Home e Administração */
+.grade-eventos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 280px));
+    justify-content: space-between;
+    row-gap: 48px;
+    column-gap: 32px;
+}
+
+@media (max-width: 960px) {
+    .grade-eventos {
+        grid-template-columns: repeat(2, minmax(0, 280px));
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 620px) {
+    .grade-eventos {
+        grid-template-columns: minmax(0, 320px);
+        justify-content: center;
+    }
+
+    .card-evento {
+        max-width: 320px;
+    }
+}

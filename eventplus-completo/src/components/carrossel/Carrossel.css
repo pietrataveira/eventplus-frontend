@@ -1,0 +1,54 @@
+.carrossel-banner {
+    width: 100%;
+    aspect-ratio: 3 / 1;
+    object-fit: cover;
+}
+
+.carrossel .carousel-control-prev,
+.carrossel .carousel-control-next {
+    width: 80px;
+    opacity: 1;
+}
+
+/* setas dentro de bolinhas brancas, como no protótipo */
+.carrossel-seta {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    transition: background-color 160ms ease;
+}
+
+.carrossel-seta::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-top: 2px solid var(--azul-escuro);
+    border-right: 2px solid var(--azul-escuro);
+    transform: translateX(-2px) rotate(45deg);
+}
+
+.carrossel-seta.anterior::before {
+    transform: translateX(2px) rotate(-135deg);
+}
+
+.carousel-control-prev:hover .carrossel-seta,
+.carousel-control-next:hover .carrossel-seta {
+    background: #fff;
+}
+
+.carrossel .carousel-indicators [data-bs-target] {
+    width: 9px;
+    height: 9px;
+    margin: 0 5px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.55;
+}
+
+.carrossel .carousel-indicators .active {
+    opacity: 1;
+}
